@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Game {
 
-    private int[] board;
+    private char[] board;
     private int[][] winCombinations;
 
     public Game() {
-        board = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8};
+        board = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8'};
         winCombinations = new int[][]{{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}};
 
         makeMove('X', askMove('X'));
@@ -41,7 +41,7 @@ public class Game {
             try {
                 System.out.println("Player " + player + ": ");
                 String strMove = sc.nextLine();
-                int move = Integer.valueOf(strMove);
+                int move = Integer.parseInt(strMove);
 
                 // TODO: Check for valid move, return only if valid. Current if is a placeholder. You may need more ifs, you may not
                 if (false) {
